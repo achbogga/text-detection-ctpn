@@ -12,6 +12,16 @@ Scene text detection based on ctpn (connectionist text proposal network). It is 
 - [x] BLSTM
 ***
 # setup
+## Requirements
+ - Preferably a GPU based linux system with respective CUDA and CUDNN packages installed for tensorflow
+ - It is recommended to use a virtualenv while installing python requirements
+ ```shell
+ cd ~/
+ virtualenv --system-site-packages ctpn
+ source ~/ctpn_env/bin/activate
+ # If you don't have a GPU, use tensorflow instead of tensorflow-gpu
+ pip install cython tensorflow-gpu
+ ```
 nms and bbox utils are written in cython, hence you have to build the library first.
 ```shell
 cd utils/bbox
